@@ -1,0 +1,16 @@
+h4 {{title}}
+
+form(role='form', name='forecastForm', novalidate)
+  .col-xs-3
+    .form-group#forecastForm
+      label(for='zip') Zip Code
+      input.form-control#zip(ng-model='zip', ng-pattern='/^[0-9]{5}$/', type='text', name='zip', required, autofocus)
+      button.btn.btn-primary.btn-md.pull-right(type='submit', ng-show='forecastForm.$valid', ng-click='getForecast()') See Into Your Future.
+  .col-xs-9(ng-show='forecast')
+    .forecast(ng-repeat='cast in forecast')
+      img(ng-src='{{cast.icon_url}}')
+      .info.pull-right
+        h4 {{cast.title}}
+        h4 {{cast.fcttext}}
+
+

@@ -6,6 +6,7 @@
     $routeProvider
     .when('/conditions', {templateUrl:'/views/conditions/conditions.html', controller:'ConditionsController'})
     .when('/webcams', {templateUrl:'/views/webcams/webcams.html', controller:'WebcamsController'})
+    .when('/forecast', {templateUrl:'/views/forecast/forecast.html', controller:'ForecastController'})
     .otherwise({redirectTo:'/conditions'});
 
   }])
