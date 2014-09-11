@@ -1,0 +1,12 @@
+h4 {{title}}
+
+form(role='form', name='webcamsForm', novalidate)
+  .col-xs-3
+    .form-group#webcamsForm
+      label(for='zip') Zip Code
+      input.form-control#zip(ng-model='zip', ng-pattern='/^[0-9]{5}$/', type='text', name='zip', required, autofocus)
+      button.btn.btn-primary.btn-md.pull-right(type='submit', ng-show='webcamsForm.$valid', ng-click='getWebcams()') Go ahead, be a voyeur.
+  .col-xs-9(ng-show='webcams')
+    .webcams(ng-repeat='webcam in webcams')
+       img(ng-src='{{webcam.WIDGETCURRENTIMAGEURL}}')
+

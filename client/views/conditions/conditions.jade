@@ -1,0 +1,17 @@
+h4 {{title}}
+
+form(role='form', name='conditionsForm', novalidate)
+  .col-xs-3
+    .form-group#conditionsForm
+      label(for='zip') Zip Code
+      input.form-control#zip(ng-model='zip', ng-pattern='/^[0-9]{5}$/', type='text', name='zip', required, autofocus)
+      button.btn.btn-primary.btn-md.pull-right(type='submit', ng-show='conditionsForm.$valid', ng-click='getConditions()') Get Conditions
+  .col-xs-9
+    .row
+      .col-xs-6
+        h3 How's the weather:
+          img.icon(src="{{icon_url}}")
+        h5 Temperature: {{temp}}
+        h5 Conditions: {{weather}}
+        h5 Humidity: {{humidity}}
+        h5 Wind: {{wind}}

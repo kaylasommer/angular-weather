@@ -1,0 +1,18 @@
+.navbar(role='navigation')
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle(data-toggle='collapse', data-target='#bs-navbar-collapse')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='/') Angular Weather
+
+    .collapse.navbar-collapse#bs-navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+          li: a(href='/#/conditions') Conditions &nbsp
+            i.fa.fa-cloud.fa-fw.fa-lg
+          li: a(href='/#/webcams') Webcams &nbsp
+            i.fa.fa-video-camera.fa-fw.fa-lg
+          li: a(href='/#/forecast') Forecast &nbsp
+           // i.fa.fa-video-camera.fa-fw.fa-lg
